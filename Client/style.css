@@ -33,22 +33,70 @@ header{
     border: 1px rgb(243, 223, 223) solid;
 }
 #search{
-    padding: 5px 10px;
+    width: 400px;
+    height: 40px;
+    padding-left: 15px;
     border-radius: 20px;
     border: 1px rgb(243, 223, 223) solid;
     outline:none;
+    text-align: left;
 }
-.user{
-    display:flex;
-    align-items:center;      
+
+.user-avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
 }
-.avatar{
-    width: var(--size-avatar);
-    height: var(--size-avatar);
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+.user-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Reset lại định dạng ảnh đại diện / icon */
+.avatar {
+    width: 32px; /* Kích thước icon vừa vặn giống ShopVNB */
+    height: 32px;
     object-fit: cover;
-    border-radius:50%;
-    margin-left: 5px;
-    border: 2px solid black ;
+    border-radius: 40%;          
+    border: 2px solid #ccc;      
+    padding: 2px;
+}
+
+/* Phần xử lý số hiển thị trên giỏ hàng (giống ShopVNB) */
+.cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #f44336; /* Màu đỏ nổi bật */
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
 }
 nav{
     background-color: var(--main-color);
