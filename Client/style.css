@@ -7,12 +7,18 @@ body{
 }
 :root{
     --size-avatar: 40px;
-    --main-color: rgb(0, 65, 93);
-    --second-color: rgb(176, 116, 3);  
+    --main-color: #0056b3;     
+    --second-color: #e6f2ff;   
+    --accent-color: #ff7b00;   
+    --text-main: #2c3e50;      
+    --bg-main: #f8f9fa;
+    --bg-submenu: #e6e6e6;
+    --text-submenu: #1e3d59;
+    --bg-submenu-hover: #e6f9ff;
 }
 .main{
     width:100%;
-    /*background-color: blanchedalmond; */
+    background-color: var(--bg-main);
     height: 300px;
     box-shadow: 0px 5px 5px rgb(114, 110, 110);
 }   
@@ -21,8 +27,8 @@ header{
     min-height: 70px;
     display:flex;
     padding: 5px;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
 }
 .logo{
     width: 50px;
@@ -33,9 +39,7 @@ header{
     border: 1px rgb(243, 223, 223) solid;
 }
 #search{
-    width: 400px;
-    height: 40px;
-    padding-left: 15px;
+    padding: 5px 200px;
     border-radius: 20px;
     border: 1px rgb(243, 223, 223) solid;
     outline:none;
@@ -98,14 +102,14 @@ header{
     border-radius: 50%;
     font-weight: bold;
 }
+/*Thanh menu*/
 nav{
     background-color: var(--main-color);
 }
 #menu-icon{
+    display: none;
     width:30px;
     padding:5px;
-
-
 }
 .menu{
     margin:0;
@@ -113,33 +117,69 @@ nav{
     display:flex;
     justify-content: center;
     list-style: none;
+    color: var(--text-main);
+}
+.sub-menu{
+    position:absolute;
+    margin-top: 8px;
+    border: left 4px; 
+    border: right 4px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 180px;
+    white-space: normal;
+    padding: 0px;
+    background-color: var(--bg-submenu);
+    display:none;
+    list-style: none;
+    z-index:111;
+}
+.arrow {
+    display: inline-block;
+    width: 14px;                 /* Chiều rộng hộp */
+    height: 14px;                /* Chiều cao hộp (tạo thành một hình vuông hoàn hảo) */
+    position: relative;
+    margin-left: 0px;
+    margin-bottom: 4px;
+    vertical-align: middle;      /* Giữ hộp luôn thẳng hàng giữa dòng chữ */
+    transform-origin: center;    /* Định vị tâm xoay chính giữa hộp */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Animation mượt hơn */
+}
+.arrow::before {
+    content: "";
+    position: absolute;
+    top: 2px;                    /* Căn chỉnh vị trí mũi tên trong hộp */
+    left: 4px;
+    width: 6px;                  /* Kích thước thực tế của mũi tên */
+    height: 6px;
+    border-bottom: 2px solid var(--text-main);
+    border-right: 2px solid var(--text-main);
+    transform: rotate(45deg);    /* Ban đầu mũi tên chúc xuống */
 }
 .menu li{
     padding: 8px 12px;
 }
 .menu li:hover{
     background-color: var(--second-color);
-    transition-duration: 0.25s;
+    /* transition-duration: 0.25s; */
+}
+.menu li:hover .arrow {
+    transform: rotate(180deg);   /* Xoay đúng nửa vòng tròn tuyệt đối */
 }
 .menu li:hover .sub-menu{
     display:block;
 }
-.sub-menu{
-    position:absolute;
-    padding:0px;
-    background-color: rgba(119, 87, 146, 0.561);
-    display:none;
-    list-style: none;
-    z-index:111;
-}
 .sub-menu li:hover{
-    /*border-bottom: 4px solid black;
-    padding-bottom: 4px; */
-    background-color: rgb(238, 177, 9);
+    border: 2px solid var(--accent-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 4px;
+    background-color: var(--bg-submenu-hover);
 }
+
+
 a{
     text-decoration: none;
-    color:white;
 }
 .content{
     width:100%;
