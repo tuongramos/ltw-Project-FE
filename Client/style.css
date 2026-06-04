@@ -2,8 +2,8 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
-   width: 1200px; 
-   margin:auto;
+    width: 1200px; 
+    margin:auto;
 }
 :root{
     --size-avatar: 40px;
