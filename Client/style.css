@@ -279,6 +279,10 @@ a{
 }
 /* Vot cau long */
 .chapter{
+    background-color: var(--accent-color);
+    
+}
+.chapter_text{
     font-size:22px;
     border-left: 6px solid var(--main-color);
     text-transform:uppercase;
@@ -383,6 +387,7 @@ a{
     font-weight: bold;
     border: 1px solid #d0011b;
 }
-.text {
+.Show_more {
     text-align:right;
+    display: flex;
 }
