@@ -283,16 +283,27 @@ a{
 /* Vot cau long */
 .chapter{
     background-color: var(--accent-color);
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-top: 30px;    
+    margin-bottom: 30px; 
+    border: 3px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     
+}
+.chapter-title-wrapper {
+    text-align: center;
+    width: 100%
 }
 .chapter_text{
     font-size:22px;
     border-left: 6px solid var(--main-color);
     text-transform:uppercase;
-    text-align: center;
     padding-left: 15px;
-    margin: 30px 15px 20px 15px;
+    margin: 30px auto 20px auto;
     color: var(--text-main);
+    display: inline-block;
 }
 
 .products {
@@ -300,7 +311,7 @@ a{
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     padding: 0 15px;
-    width: 100%;
+    width: auto;
 }
 
 .item {
@@ -391,11 +402,14 @@ a{
     border: 1px solid #d0011b;
 }
 .Show_more {
-    text-align:right;
     display: flex;
+    justify-content:flex-end;
+    padding-right: 0;
+    margin-top: 15px;
+}
 
         /* USER-PAGE */
-}
+
 .login-body {
     background-color: #f8f9fa;
     display: flex;
